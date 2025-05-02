@@ -39,13 +39,13 @@ MCP for Vedic astrology API  powered by Prokerala API, providing astrological se
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd prokeralamcp
+   git clone git@github.com:sajithamma/prokerala-mcp-server.git
+   cd prokerala-mcp-server
    ```
 
 2. Create and activate a virtual environment:
    ```bash
-   python -m venv venv
+   python3.12 -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
@@ -56,6 +56,7 @@ MCP for Vedic astrology API  powered by Prokerala API, providing astrological se
 
 4. Create a `.env` file with your Prokerala API credentials:
    ```
+   OPENAI_API_KEY=your_openai_api_key
    CLIENT_ID=your_client_id
    CLIENT_SECRET=your_client_secret
    TOKEN_FILE_PATH=access_token.json
