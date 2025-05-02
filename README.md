@@ -152,6 +152,7 @@ The web interface will be available at `http://localhost:8000` and provides:
 ## Environment Variables
 
 The application uses the following environment variables:
+- `OPENAI_API_KEY`: Your OpenAI API key
 - `CLIENT_ID`: Your Prokerala API client ID
 - `CLIENT_SECRET`: Your Prokerala API client secret
 - `TOKEN_FILE_PATH`: Path to store the access token
