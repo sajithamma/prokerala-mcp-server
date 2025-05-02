@@ -73,6 +73,29 @@ fastmcp run coremcp.py:mcp --transport sse
 
 The server will start on `http://localhost:8000`
 
+### testclient.py
+
+Here's how to initialize the server in your  client code:
+```python
+server = MCPServerSse(
+    name="Prokerala SSE Server",
+    params={
+        "url": "http://localhost:8000/sse",
+    },
+)
+await server.connect()  # Initialize the server connection
+
+# Initialize the Agent with Prokerala tools
+agent = Agent(
+    name="Prokerala Assistant",
+    instructions="""You are a vedic astrologer. Use Prokerala API tools to answer astrology questions. 
+    Ask for place details to determine latitude/longitude. Use district/state if exact location is unknown.
+    Only call tools when all required parameters are available.""",
+    mcp_servers=[server],
+    model_settings=ModelSettings(tool_choice="auto"),
+)
+```
+
 ### 2. Run the Test Client
 
 In a new terminal:
