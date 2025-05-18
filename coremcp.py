@@ -18,8 +18,8 @@ logger = logging.getLogger("pyyan")
 mcp = FastMCP("Prokerala MCP")
 
 # Prokerala API credentials
-CLIENT_ID = "609cb2d2-7c17-499a-a7a7-0ae0cb358871"
-CLIENT_SECRET = "8qTGAhYD5sa6Xfpa1cydBMwB0T3KA4kBWNrN7oi2"
+CLIENT_ID = "your client id here"
+CLIENT_SECRET = "your secret here"
 TOKEN_FILE_PATH = 'access_token.json'
 
 def print_api_info(title, data):
